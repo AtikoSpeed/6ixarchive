@@ -1,4 +1,6 @@
 ---
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
 import "../styles/global.sass";
 ---
 
@@ -12,6 +14,8 @@ import "../styles/global.sass";
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Sidebar />
+		<Header pageTitle={Astro.props.pageTitle} />
 		<slot />
 	</body>
 </html>
